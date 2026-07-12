@@ -1,0 +1,13 @@
+# Two pointers method
+# O(n) Time
+# O(1) Space
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+
+        return k    
